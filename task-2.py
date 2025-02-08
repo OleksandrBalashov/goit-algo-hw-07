@@ -26,11 +26,11 @@ class BST:
             else:
                 self._insert(node.right, value)
 
-    def find_max(self):
+    def find_min(self):
         if self.root is None:
             return None
-    
+        
         current = self.root
-        while current.right is not None:
-            current = current.right
+        while current.left:
+            current = current.left
         return current.value
